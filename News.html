@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NEWS.com</title>
+    <link rel="stylesheet" href="./News.css" />
+  </head>
+
+  <body>
+    <nav>
+      <div class="main-nav container flex">
+        <div class="logo" onclick="reload()">News.com</div>
+        <div class="nav-links">
+          <ul class="flex">
+            <li
+              class="hover-link nav-item"
+              id="spt"
+              onclick="onNavItemClick('spt')"
+            >
+              SPORTS
+            </li>
+            <li
+              class="hover-link nav-item"
+              id="finance"
+              onclick="onNavItemClick('finance')"
+            >
+              FINANCE
+            </li>
+            <li
+              class="hover-link nav-item"
+              id="politics"
+              onclick="onNavItemClick('politics')"
+            >
+              POLITICS
+            </li>
+            <li
+              class="hover-link nav-item"
+              id="Tech"
+              onclick="onNavItemClick('technology')"
+            >
+              TECHNOLOGY
+            </li>
+          </ul>
+        </div>
+        <div class="search-bar flex">
+          <input
+            id="search-text"
+            type="text"
+            class="news-input"
+            placeholder="e.g.Science"
+          />
+          <button id="search-button" class="search-button">Search</button>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="cards-container container flex" id="cards-container"></div>
+    </main>
+
+    <template id="template-news-card">
+      <div class="card">
+        <div class="card-header">
+          <img src="" alt="news-image" id="news-img" />
+        </div>
+        <div class="card-content">
+          <h3 id="news-title">Title</h3>
+          <h6 class="news-source" id="news-source">26/02/2024</h6>
+          <p class="news-desc" id="news-desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+            officia natus non minima exercitationem, hic sint dolorem architecto
+            nihil quibusdam fugit iure eius tenetur velit quae quis,
+            consequuntur, libero doloribus.
+          </p>
+        </div>
+      </div>
+    </template>
+
+    <script src="./News.js"></script>
+  </body>
+</html>
+ 
